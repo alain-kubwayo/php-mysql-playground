@@ -50,7 +50,45 @@
     // number functions
     // echo floor($pi);
     // echo ceil($pi);
-    echo pi();
+    // echo pi();
+
+    // ARRAYS
+    // indexed arrays: index is used to get value
+    $peopleOne = ['alain', 'tom', 'james'];
+    // echo $peopleOne; // Array to string conversion warning. use print_r(arr);
+    // echo $peopleOne[1];
+    $peopleTwo = array('clement', 'innocent');
+    // echo $peopleTwo[1];
+    $ages = [20, 40, 79];
+    $ages[2] = 60;
+    $ages[] = 80; // pushes 80 to the end of array
+    array_push($ages, 100);
+    // print_r($ages);
+    echo count($ages);
+
+    // Merging arrays
+    $peopleThree = array_merge($peopleOne, $peopleTwo);
+    // print_r($peopleThree);
+
+    // associative arrays: key-value pairs
+    $studentGradesOne = [
+        'alain' => 'A',
+        'james' => 'B',
+        'tom' => 'D+'
+    ];
+    $studentGradesTwo = array(
+        'helen' => 'C',
+        'john' => 'D'
+    );
+    // print_r($studentGradesOne['alain']);
+    // print_r($studentGradesTwo);
+    $studentGradesTwo['todd'] = 'A+';
+    $studentGradesTwo['todd'] = 'F';
+    // print_r($studentGradesTwo);
+    // echo count($studentGradesOne);
+    $studentGradesThree = array_merge($studentGradesOne, $studentGradesTwo);
+    print_r($studentGradesThree);
+
 ?>
 
 <!DOCTYPE html>
