@@ -64,7 +64,7 @@
     $ages[] = 80; // pushes 80 to the end of array
     array_push($ages, 100);
     // print_r($ages);
-    echo count($ages);
+    // echo count($ages);
 
     // Merging arrays
     $peopleThree = array_merge($peopleOne, $peopleTwo);
@@ -105,6 +105,35 @@
     // print_r($popped);
     // print_r($blogs);
 
+    // Loops
+
+    $fruits = ['apple', 'mango', 'banana'];
+    // for($i = 0; $i < count($fruits); $i++){
+    //     echo $fruits[$i] . '<br />';
+    // };
+
+    // foreach($fruits as $fruit){
+    //     echo $fruit . '<br />';
+    // };
+
+    $products = [
+        ['name' => 'shiny star', 'price' => 20],
+        ['name' => 'green shell', 'price' => 10],
+        ['name' => 'red shell', 'price' => 15],
+        ['name' => 'gold coin', 'price' => 5],
+        ['name' => 'lightning bolt', 'price' => 0],
+        ['name' => 'banana skin', 'price' => 2],
+    ];
+
+    // foreach($products as $product){
+    //     echo $product['name'] . ' - ' . $product['price'] . '<br />';
+    // };
+
+    // $i = 0;
+    // while($i < count($products)){
+    //     echo $products[$i]['name'] . '<br />';
+    //     $i++;
+    // }
 ?>
 
 <!DOCTYPE html>
@@ -121,5 +150,14 @@
     <div><?php echo $age; ?></div>
     <h2><?php echo GRAVITY; ?></h2>
     <h3><?php echo $stringOne . ' ' . $stringTwo; ?></h3>
+    <h1>Products</h1>
+    <ul>
+        <?php foreach($products as $product){ ?>
+            <li>
+                <h3><?php echo $product['name']; ?></h3>
+                <p>$ <?php echo $product['price']; ?></p>
+            </li>
+        <?php } ?>
+    </ul>
 </body>
 </html>
