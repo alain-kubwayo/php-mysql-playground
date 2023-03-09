@@ -87,7 +87,23 @@
     // print_r($studentGradesTwo);
     // echo count($studentGradesOne);
     $studentGradesThree = array_merge($studentGradesOne, $studentGradesTwo);
-    print_r($studentGradesThree);
+    // print_r($studentGradesThree);
+
+    // Multi-dimensional arrays
+    $blogs = [
+        ['title' => 'alain party', 'author' => 'alain', 'content' => 'lorem', 'likes' => 30],
+        ['title' => 'john cat', 'author' => 'john', 'content' => 'lorem', 'likes' => 50],
+        ['title' => 'zelda fitness', 'author' => 'zelda', 'content' => 'lorem', 'likes' => 25],
+    ];
+
+    // print_r($blogs[1]['author']);
+    // echo count($blogs);
+    $blogs[] = ['title' => 'castle party', 'author' => 'jane', 'content' => 'lorem', 'likes' => 100];
+    // print_r($blogs);
+    // pops off last item in the array
+    // $popped = array_pop($blogs);
+    // print_r($popped);
+    // print_r($blogs);
 
 ?>
 
