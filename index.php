@@ -10,8 +10,10 @@
 
     // or # used for commenting
 
+    // Constants
     define('GRAVITY', 9.18);
     
+    // Strings
     $stringOne = 'my email is ';
     $stringTwo = 'ahkubwayo@gmail.com';
     // echo "Hallo $name"; // variable interpolation => Hallo James
@@ -24,7 +26,31 @@
     // echo strlen($name);
     // echo strtoupper($name);
     // echo strtolower($name);
-    echo str_replace('m', 't', $name);
+    // echo str_replace('m', 't', $name);
+
+    // Numbers: two data types: integers and floats
+    $radius = 25;
+    $pi = 3.14;
+
+    // basic operations: *,-,+,/,**
+    // echo $pi * $radius ** 2;
+    // Order of operation: BIDMAS
+    // Increment and decrement operators:
+    // echo $radius++;
+    // echo $radius;
+    // echo $radius--;
+    // echo $radius;
+
+    // shorthand operators:
+    $age += 10;
+    // echo $age;
+    $age *= 2;
+    // echo $age;
+    
+    // number functions
+    // echo floor($pi);
+    // echo ceil($pi);
+    echo pi();
 ?>
 
 <!DOCTYPE html>
