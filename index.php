@@ -53,7 +53,7 @@
     // echo pi();
 
     // ARRAYS
-    // indexed arrays: index is used to get value
+    // !indexed arrays: index is used to get value
     $peopleOne = ['alain', 'tom', 'james'];
     // echo $peopleOne; // Array to string conversion warning. use print_r(arr);
     // echo $peopleOne[1];
@@ -70,7 +70,7 @@
     $peopleThree = array_merge($peopleOne, $peopleTwo);
     // print_r($peopleThree);
 
-    // associative arrays: key-value pairs
+    // !associative arrays: key-value pairs
     $studentGradesOne = [
         'alain' => 'A',
         'james' => 'B',
@@ -89,7 +89,7 @@
     $studentGradesThree = array_merge($studentGradesOne, $studentGradesTwo);
     // print_r($studentGradesThree);
 
-    // Multi-dimensional arrays
+    // !Multi-dimensional arrays
     $blogs = [
         ['title' => 'alain party', 'author' => 'alain', 'content' => 'lorem', 'likes' => 30],
         ['title' => 'john cat', 'author' => 'john', 'content' => 'lorem', 'likes' => 50],
@@ -134,6 +134,44 @@
     //     echo $products[$i]['name'] . '<br />';
     //     $i++;
     // }
+
+    // !Booleans & Comparisons
+
+    // Comparisons booleans (true or false)
+
+    // echo true; // "1"
+    // echo false; // "" empty string since it's false
+    // echoing boolean to the browser, we don't see the text true or false. Instead values have to be converted to strings and everything outputted to the browser is ultimately a string of text, numbers or characters. Now, PHP when it sees a boolean, it converts it to either a string of 1 if it's true or a string of empty if it's false. Things are converted to string. Truthy values become 1 as a string and falsy become empty string.
+    // !1 is a truthy value and empty string is false
+    
+    // !comparison with numbers:
+
+    // echo 5 < 10; // 1
+    // echo 5 > 10; // "" 0
+    // echo 5 == 10; // "" 0
+    // echo 10 == 10;
+    // echo 5 != 10; 
+    // echo 5 <= 5;
+    // echo 5 >= 5;
+
+    // !comparison with strings:
+
+    // echo 'alain' < 'yoshi'; // a comes before y => 1
+    // echo 'alain' > 'yoshi'; // ""
+    // echo 'alain' > 'Alain'; // uppercase letter is seen as less than lowercase letter
+    // echo 'mario' > 'Mario';
+    // echo 'mario' == 'mario'; // 1
+
+    // loose vs strict equal comparison
+
+    // ! == double equals: we don't take into consideration any kind of type
+    // echo 5 == '5'; // 1 => loose comparison
+    // echo 5 === '5'; // "" => strict comparison: data type is taken into account. 
+    // echo 5 === 5;
+    // Most of the time: it's wiser to use strict comparison since there is less room for error
+
+    // echo true == "1";
+    // echo false == "";
 ?>
 
 <!DOCTYPE html>
